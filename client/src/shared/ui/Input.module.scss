@@ -1,0 +1,41 @@
+@use 'shared/styles/variables' as *;
+@use 'shared/styles/mixins' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $color-text-secondary;
+}
+
+.input {
+  min-height: 44px;
+  padding: 10px $spacing-md;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  font-size: 1rem;
+  color: $color-text;
+  background: $color-surface;
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+  }
+
+  @include focus-ring;
+}
+
+.inputError {
+  border-color: $color-danger;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: $color-danger;
+}

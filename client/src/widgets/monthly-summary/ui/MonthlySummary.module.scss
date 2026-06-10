@@ -1,0 +1,15 @@
+@use 'shared/styles/variables' as *;
+
+.period {
+  margin: 0;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+  text-transform: capitalize;
+}
+
+.amount {
+  margin: $spacing-sm 0 0;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: $color-primary;
+}

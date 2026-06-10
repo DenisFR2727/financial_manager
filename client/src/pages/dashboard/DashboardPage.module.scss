@@ -1,0 +1,17 @@
+@use 'shared/styles/variables' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.grid {
+  display: grid;
+  gap: $spacing-lg;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+}

@@ -1,0 +1,33 @@
+@use 'shared/styles/variables' as *;
+@use 'shared/styles/mixins' as *;
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: $color-text-secondary;
+}
+
+.monthLabel {
+  color: $color-text;
+  text-transform: capitalize;
+}
+
+.input {
+  min-height: 44px;
+  padding: 10px $spacing-md;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  font-size: 1rem;
+  color: $color-text;
+  background: $color-surface;
+  cursor: pointer;
+
+  @include focus-ring;
+}

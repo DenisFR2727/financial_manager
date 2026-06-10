@@ -1,0 +1,7 @@
+@use 'shared/styles/variables' as *;
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}

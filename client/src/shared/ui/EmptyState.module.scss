@@ -1,0 +1,19 @@
+@use 'shared/styles/variables' as *;
+
+.empty {
+  padding: $spacing-xl $spacing-md;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: $color-text-secondary;
+}
+
+.description {
+  margin: $spacing-sm 0 0;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+}

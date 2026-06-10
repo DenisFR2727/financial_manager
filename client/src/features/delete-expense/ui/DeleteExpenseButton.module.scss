@@ -1,0 +1,23 @@
+@use 'shared/styles/variables' as *;
+
+.button {
+  flex-shrink: 0;
+}
+
+.message {
+  margin: 0 0 $spacing-lg;
+  font-size: 0.9375rem;
+  color: $color-text-secondary;
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: flex-end;
+}
+
+.error {
+  margin: $spacing-md 0 0;
+  font-size: 0.875rem;
+  color: $color-danger;
+}

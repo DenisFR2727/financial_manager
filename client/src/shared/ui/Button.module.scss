@@ -1,5 +1,5 @@
-@use 'shared/styles/variables' as *;
-@use 'shared/styles/mixins' as *;
+@use "shared/styles/variables" as *;
+@use "shared/styles/mixins" as *;
 
 .button {
   display: inline-flex;
@@ -35,6 +35,7 @@
 .secondary {
   background: #f1f5f9;
   color: $color-text-secondary;
+  //   color: $color-primary !important;
 
   &:hover:not(:disabled) {
     background: #e2e8f0;

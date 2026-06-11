@@ -1,4 +1,4 @@
-@use 'shared/styles/variables' as *;
+@use "shared/styles/variables" as *;
 
 .form {
   display: flex;
@@ -17,3 +17,11 @@
   font-size: 0.875rem;
   color: $color-danger;
 }
+
+.cancelButton {
+  color: $color-primary !important;
+}
+
+// #cancelButton {
+//   color: red !important;
+// }

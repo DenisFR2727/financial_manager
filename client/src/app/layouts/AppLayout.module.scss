@@ -1,5 +1,5 @@
-@use 'shared/styles/variables' as *;
-@use 'shared/styles/mixins' as *;
+@use "shared/styles/variables" as *;
+@use "shared/styles/mixins" as *;
 
 .layout {
   display: flex;
@@ -26,8 +26,16 @@
 }
 
 .sidebarHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $spacing-sm;
   padding: $spacing-lg;
   border-bottom: 1px solid $color-border;
+}
+
+.headerText {
+  min-width: 0;
 
   h1 {
     margin: 0;
@@ -55,7 +63,9 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: $color-text-secondary;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 
   &:hover {
     background: #f1f5f9;
@@ -74,7 +84,10 @@
 }
 
 .mobileHeader {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
   padding: $spacing-md;
   border-bottom: 1px solid $color-border;
   background: $color-surface;

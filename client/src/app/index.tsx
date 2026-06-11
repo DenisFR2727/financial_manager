@@ -1,10 +1,13 @@
-import { AppProviders } from '@app/providers';
-import { AppRouter } from '@app/router';
+import { ThemeProvider } from "@shared/lib/theme";
+import { AppProviders } from "@app/providers";
+import { AppRouter } from "@app/router";
 
 export function App() {
   return (
-    <AppProviders>
-      <AppRouter />
-    </AppProviders>
+    <ThemeProvider>
+      <AppProviders>
+        <AppRouter />
+      </AppProviders>
+    </ThemeProvider>
   );
 }

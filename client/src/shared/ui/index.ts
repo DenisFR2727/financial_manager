@@ -6,3 +6,4 @@ export { Modal } from './Modal';
 export { Skeleton, CardSkeleton } from './Skeleton';
 export { EmptyState } from './EmptyState';
 export { ErrorState } from './ErrorState';
+export { ThemeToggle } from './ThemeToggle';

@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { ThemeToggle } from '@shared/ui';
 import styles from './AppLayout.module.scss';
 
 const navItems = [
@@ -11,8 +12,11 @@ export function AppLayout() {
     <div className={styles.layout}>
       <aside className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
-          <h1>Financial Manager</h1>
-          <p>Контроль витрат</p>
+          <div className={styles.headerText}>
+            <h1>Financial Manager</h1>
+            <p>Контроль витрат</p>
+          </div>
+          <ThemeToggle />
         </div>
         <nav className={styles.sidebarNav}>
           {navItems.map((item) => (
@@ -33,6 +37,7 @@ export function AppLayout() {
       <div className={styles.content}>
         <header className={styles.mobileHeader}>
           <h1>Financial Manager</h1>
+          <ThemeToggle />
         </header>
 
         <main className={styles.main}>

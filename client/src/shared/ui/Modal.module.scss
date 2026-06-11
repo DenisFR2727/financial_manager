@@ -1,4 +1,4 @@
-@use 'shared/styles/variables' as *;
+@use "shared/styles/variables" as *;
 
 .overlay {
   position: fixed;
@@ -16,6 +16,8 @@
 }
 
 .modal {
+  position: relative;
+  top: -200px;
   width: 100%;
   max-width: 480px;
   max-height: 90vh;

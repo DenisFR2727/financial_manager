@@ -1,0 +1,31 @@
+@use 'shared/styles/variables' as *;
+@use 'shared/styles/mixins' as *;
+
+.toggle {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: 0;
+  color: $color-text-secondary;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: $color-text;
+    background: $color-primary-light;
+    border-color: transparent;
+  }
+
+  @include focus-ring;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}

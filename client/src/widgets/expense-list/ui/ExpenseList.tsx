@@ -1,11 +1,15 @@
-import { useState } from 'react';
-import { getExpenseCategory, useExpenses, type Expense } from '@entities/expense';
-import { DeleteExpenseButton } from '@features/delete-expense';
-import { EditExpenseForm } from '@features/edit-expense';
-import { useMonthStore } from '@features/month-filter';
-import { formatCurrency, formatDate } from '@shared/lib';
-import { Button, Card, EmptyState, ErrorState, Skeleton } from '@shared/ui';
-import styles from './ExpenseList.module.scss';
+import { useState } from "react";
+import {
+  getExpenseCategory,
+  useExpenses,
+  type Expense,
+} from "@entities/expense";
+import { DeleteExpenseButton } from "@features/delete-expense";
+import { EditExpenseForm } from "@features/edit-expense";
+import { useMonthStore } from "@features/month-filter";
+import { formatCurrency, formatDate } from "@shared/lib";
+import { Button, Card, EmptyState, ErrorState, Skeleton } from "@shared/ui";
+import styles from "./ExpenseList.module.scss";
 
 function ExpenseListSkeleton() {
   return (
@@ -67,26 +71,37 @@ export function ExpenseList() {
                       />
                     )}
                     <span className={styles.categoryName}>
-                      {category?.name ?? 'Без категорії'}
+                      {category?.name ?? "Без категорії"}
                     </span>
-                    <span className={styles.amount}>{formatCurrency(expense.amount)}</span>
+                    <span className={styles.amount}>
+                      {formatCurrency(expense.amount)}
+                    </span>
                   </div>
                   <p className={styles.meta}>
-                    <time dateTime={expense.date}>{formatDate(expense.date)}</time>
+                    <time dateTime={expense.date}>
+                      {formatDate(expense.date)}
+                    </time>
                     {expense.description && (
-                      <span className={styles.description}> · {expense.description}</span>
+                      <span className={styles.description}>
+                        {" "}
+                        · {expense.description}
+                      </span>
                     )}
                   </p>
                 </div>
                 <div className={styles.actions}>
                   <Button
+                    className={styles.editButton}
                     type="button"
                     variant="secondary"
                     onClick={() => setEditingExpense(expense)}
                   >
                     Редагувати
                   </Button>
-                  <DeleteExpenseButton expenseId={expense._id} expenseLabel={label} />
+                  <DeleteExpenseButton
+                    expenseId={expense._id}
+                    expenseLabel={label}
+                  />
                 </div>
               </li>
             );
@@ -94,7 +109,10 @@ export function ExpenseList() {
         </ul>
       </Card>
 
-      <EditExpenseForm expense={editingExpense} onClose={() => setEditingExpense(null)} />
+      <EditExpenseForm
+        expense={editingExpense}
+        onClose={() => setEditingExpense(null)}
+      />
     </>
   );
 }
